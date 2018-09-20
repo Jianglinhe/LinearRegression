@@ -50,6 +50,8 @@ def compute_theta(theta_init, step, X, y):
     temp = ((X*np.transpose(np.mat(theta_init))) - y)
     theta_init[0] = theta_init[0] - (step * np.sum(temp)/(len(y)))
     theta_init[1] = theta_init[1] - np.sum(step * (np.transpose(X[:,1])*temp )/(len(y)))
+
+
     return theta_init
 
 def result(theta_init, n, X, y, step):
